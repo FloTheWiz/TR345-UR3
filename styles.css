@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+body {
+  color: white;
+  background-color: black;
+  font-family: 'Quantico', sans-serif;
+  padding: 0;
+  margin: 0;
+  height:100vh;
+  position:relative;
+}
+canvas, img {
+  image-rendering: pixelated;
+}
+
+
+button {
+  background-color: #515151;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75) inset;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Michroma';
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1A1A1A;
+}
+input {
+  background-color: #313131;
+  padding: 10px 20px;
+  border: 1px solid #313131;
+  border-radius: 2px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75) inset;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Michroma';
+}
+
+header {
+    text-align:center;
+}
+.column{
+  display:flex;
+  flex-direction: column;
+
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+#outer {
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+  width: 100%;
+  height: 100%;
+}
+#leftColumn {
+  
+}
+#charCanvas {
+  position:absolute;
+  bottom:74px;
+  transform: scale(2.0)
+}
+
+/* Animations */
+.fadeIn {
+  opacity: 0%;
+  animation: fadein 2s;
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.pulsing {
+  animation: pulsing 2s infinite;
+}
+@keyframes pulsing {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
